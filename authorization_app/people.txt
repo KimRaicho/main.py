@@ -1,3 +1,4 @@
 First_Name 	Last_Name 	Age 	Gender 	ID_Num 
 evans	kimathi	29	Male	2269454
 alicia	nuwabigaba	20	Female	231907
+zuri	kendi	3	Female	0
