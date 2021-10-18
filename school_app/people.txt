@@ -1,3 +1,0 @@
-evans	kimathi	29	Male	2269454
-Alicia	Muwabigaba	20	Female	291468
-First_Name 	Last_Name 	Age 	Gender 	ID_Num 	evans	kimthi	29	Male	294739

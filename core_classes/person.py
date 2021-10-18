@@ -1,3 +1,6 @@
+import os
+
+
 class Person:
     people = []
 
@@ -14,17 +17,32 @@ class Person:
 
     @staticmethod
     def save_to_file():
-        file = open('people.txt', 'a')
-        file.writelines('First_Name \t' + 'Last_Name \t' + 'Age \t' + 'Gender \t' + 'ID_Num \n')
 
-        for person in Person.people:
-            file.write(person.first_name + '\t')
-            file.write(person.last_name + '\t')
-            file.write(str(person.age) + '\t')
-            file.write(person.gender + '\t')
-            file.write(str(person.id_number))
-            file.write('\n')
-        file.close()
+        if not os.path.isfile('people.txt'):
+            file = open('people.txt', 'a')
+            file.writelines('First_Name \t' + 'Last_Name \t' + 'Age \t' + 'Gender \t' + 'ID_Num \n')
+
+            for person in Person.people:
+                file.write(person.first_name + '\t')
+                file.write(person.last_name + '\t')
+                file.write(str(person.age) + '\t')
+                file.write(person.gender + '\t')
+                file.write(str(person.id_number))
+                file.write('\n')
+
+            file.close()
+
+        else:
+            file = open('people.txt', 'a')
+
+            for person in Person.people:
+                file.write(person.first_name + '\t')
+                file.write(person.last_name + '\t')
+                file.write(str(person.age) + '\t')
+                file.write(person.gender + '\t')
+                file.write(str(person.id_number))
+                file.write('\n')
+            file.close()
 
     def display(self):
         print(f"First name: {self.first_name}")
