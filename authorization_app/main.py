@@ -24,4 +24,4 @@ def create_person():
 
 if __name__ == '__main__':
     create_person()
-    print(p.Person.people)
+    print(f'\n Person Created: {p.Person.people}')
