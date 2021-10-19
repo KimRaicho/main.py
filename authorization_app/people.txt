@@ -1,0 +1,4 @@
+First_Name 		Last_Name 		Age 		Gender 		ID_Num 
+Evans			Kimathi			29			Male		1000
+Jane			Kimathi			50			Female		2000
+James			Kimathi			60			Male		3000
