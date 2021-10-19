@@ -15,18 +15,21 @@ class Person:
 
         Person.people.append(self)
 
+    def __repr__(self):
+        return f"Person('{self.first_name}', '{self.last_name}', '{self.gender}', {self.age}, {self.id_number})"
+
     @staticmethod
     def save_to_file():
 
         if not os.path.isfile('people.txt'):
             file = open('people.txt', 'a')
-            file.writelines('First_Name \t' + 'Last_Name \t' + 'Age \t' + 'Gender \t' + 'ID_Num \n')
+            file.writelines('First_Name \t\t' + 'Last_Name \t\t' + 'Age \t\t' + 'Gender \t\t' + 'ID_Num \n')
 
             for person in Person.people:
-                file.write(person.first_name + '\t')
-                file.write(person.last_name + '\t')
-                file.write(str(person.age) + '\t')
-                file.write(person.gender + '\t')
+                file.write(person.first_name + '\t\t')
+                file.write(person.last_name + '\t\t')
+                file.write(str(person.age) + '\t\t')
+                file.write(person.gender + '\t\t')
                 file.write(str(person.id_number))
                 file.write('\n')
 
